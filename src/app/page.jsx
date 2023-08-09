@@ -12,9 +12,9 @@ import {
   TwitterIcon,
 } from '@/components/SocialIcons'
 import logoDHS from '@/images/logos/dhs.svg'
-import logoFacebook from '@/images/logos/facebook.svg'
+import logoFillify from '@/images/logos/fillify.png'
 import logoElegant from '@/images/logos/elegant.svg'
-import logoStarbucks from '@/images/logos/starbucks.svg'
+import logoSimplyNutrition from '@/images/logos/simplynutrition.png'
 import image1 from '@/images/photos/image-1.png'
 import image2 from '@/images/photos/image-2.png'
 import image3 from '@/images/photos/image-3.png'
@@ -114,14 +114,14 @@ function Resume() {
     {
       company: 'Fillify.com',
       title: 'Lead Application Engineer',
-      logo: logoFacebook,
+      logo: logoFillify,
       start: '2020',
       end: '2022',
     },
     {
       company: 'Simply Nutrition',
       title: 'Co-founder & CTO',
-      logo: logoStarbucks,
+      logo: logoSimplyNutrition,
       start: '2016',
       end: '2022',
     },
@@ -137,7 +137,7 @@ function Resume() {
         {resume.map((role, roleIndex) => (
           <li key={roleIndex} className="flex gap-4">
             <div className="relative mt-1 flex h-10 w-10 flex-none items-center justify-center rounded-full shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
-              <Image src={role.logo} alt="" className="h-7 w-7" unoptimized />
+              <Image src={role.logo} alt="" className="h-7 w-7 rounded-[20px]" unoptimized />
             </div>
             <dl className="flex flex-auto flex-wrap gap-x-2">
               <dt className="sr-only">Company</dt>
