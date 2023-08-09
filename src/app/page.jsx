@@ -112,18 +112,18 @@ function Resume() {
       },
     },
     {
-      company: 'Facebook',
-      title: 'iOS Software Engineer',
+      company: 'Fillify.com',
+      title: 'Lead Application Engineer',
       logo: logoFacebook,
-      start: '2011',
-      end: '2014',
+      start: '2020',
+      end: '2022',
     },
     {
-      company: 'Starbucks',
-      title: 'Shift Supervisor',
+      company: 'Simply Nutrition',
+      title: 'Co-founder & CTO',
       logo: logoStarbucks,
-      start: '2008',
-      end: '2011',
+      start: '2016',
+      end: '2022',
     },
   ]
 
