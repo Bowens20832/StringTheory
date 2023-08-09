@@ -1,13 +1,10 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import clsx from 'clsx'
-
 import { Button } from '@/components/Button'
-import { Card } from '@/components/Card'
 import { Container } from '@/components/Container'
 import {
   GitHubIcon,
-  InstagramIcon,
   LinkedInIcon,
   TwitterIcon,
 } from '@/components/SocialIcons'
@@ -20,7 +17,6 @@ import image2 from '@/images/photos/image-2.png'
 import image3 from '@/images/photos/image-3.png'
 import image4 from '@/images/photos/image-4.png'
 import image5 from '@/images/photos/image-5.png'
-import { formatDate } from '@/lib/formatDate'
 
 function MailIcon(props) {
   return (
@@ -167,7 +163,8 @@ function Resume() {
           </li>
         ))}
       </ol>
-      <Button href="#" variant="secondary" className="group mt-6 w-full">
+
+      <Button href="/Senior_Application_Engineer_Resume.pdf" target="_blank" download="cv" variant="secondary" className="group mt-6 w-full">
         Download CV
         <ArrowDownIcon className="h-4 w-4 stroke-zinc-400 transition group-active:stroke-zinc-600 dark:group-hover:stroke-zinc-50 dark:group-active:stroke-zinc-50" />
       </Button>
