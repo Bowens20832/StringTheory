@@ -2,3 +2,5 @@
 @import 'tailwindcss/components';
 @import './prism.css';
 @import 'tailwindcss/utilities';
+
+@import '@brandonowens/elegant-ui/styles.css';
