@@ -8,6 +8,7 @@ import {
   LinkedInIcon,
   TwitterIcon,
 } from '@/components/SocialIcons'
+import logoFAA from '@/images/logos/faa.png'
 import logoDHS from '@/images/logos/dhs.svg'
 import logoFillify from '@/images/logos/fillify.png'
 import logoElegant from '@/images/logos/elegant.svg'
@@ -88,6 +89,16 @@ function SocialLink({ icon: Icon, ...props }) {
 function Resume() {
   let resume = [
     {
+      company: 'Federal Aviation Administration',
+      title: 'Senior Full Stack Engineer',
+      logo: logoFAA,
+      start: '2024',
+      end: {
+        label: 'Present',
+        dateTime: new Date().getFullYear(),
+      },
+    },
+    {
       company: 'Elegant Framework',
       title: 'Founder',
       logo: logoElegant,
@@ -102,10 +113,7 @@ function Resume() {
       title: 'Senior Frontend Developer',
       logo: logoDHS,
       start: '2023',
-      end: {
-        label: 'Present',
-        dateTime: new Date().getFullYear(),
-      },
+      end: '2024',
     },
     {
       company: 'Fillify.com',
