@@ -14,7 +14,9 @@ function ChevronRightIcon(props) {
   )
 }
 
-export function Card({ as: Component = 'div', className, children }) {
+export function Card({ as, className, children }) {
+  let Component = as ?? 'div'
+
   return (
     <Component
       className={clsx(className, 'group relative flex flex-col items-start')}
@@ -27,7 +29,7 @@ export function Card({ as: Component = 'div', className, children }) {
 Card.Link = function CardLink({ children, ...props }) {
   return (
     <>
-      <div className="absolute -inset-x-4 -inset-y-6 z-0 scale-95 bg-zinc-50 opacity-0 transition group-hover:scale-100 group-hover:opacity-100 dark:bg-zinc-800/50 sm:-inset-x-6 sm:rounded-2xl" />
+      <div className="absolute -inset-x-4 -inset-y-6 z-0 scale-95 bg-zinc-50 opacity-0 transition group-hover:scale-100 group-hover:opacity-100 sm:-inset-x-6 sm:rounded-2xl dark:bg-zinc-800/50" />
       <Link {...props}>
         <span className="absolute -inset-x-4 -inset-y-6 z-20 sm:-inset-x-6 sm:rounded-2xl" />
         <span className="relative z-10">{children}</span>
@@ -36,7 +38,9 @@ Card.Link = function CardLink({ children, ...props }) {
   )
 }
 
-Card.Title = function CardTitle({ as: Component = 'h2', href, children }) {
+Card.Title = function CardTitle({ as, href, children }) {
+  let Component = as ?? 'h2'
+
   return (
     <Component className="text-base font-semibold tracking-tight text-zinc-800 dark:text-zinc-100">
       {href ? <Card.Link href={href}>{children}</Card.Link> : children}
@@ -65,18 +69,20 @@ Card.Cta = function CardCta({ children }) {
 }
 
 Card.Eyebrow = function CardEyebrow({
-  as: Component = 'p',
+  as,
   decorate = false,
   className,
   children,
   ...props
 }) {
+  let Component = as ?? 'p'
+
   return (
     <Component
       className={clsx(
         className,
         'relative z-10 order-first mb-3 flex items-center text-sm text-zinc-400 dark:text-zinc-500',
-        decorate && 'pl-3.5'
+        decorate && 'pl-3.5',
       )}
       {...props}
     >

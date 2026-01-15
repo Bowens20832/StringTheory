@@ -89,8 +89,8 @@ function SocialLink({ icon: Icon, ...props }) {
 function Resume() {
   let resume = [
     {
-      company: 'Federal Aviation Administration',
-      title: 'Senior Full Stack Engineer',
+      company: 'Amergis',
+      title: 'Application Tech Lead',
       logo: logoFAA,
       start: '2024',
       end: {
@@ -99,34 +99,24 @@ function Resume() {
       },
     },
     {
-      company: 'Elegant Framework',
-      title: 'Founder',
-      logo: logoElegant,
+      company: 'Federal Aviation Administration',
+      title: 'Senior Full-Stack Engineer',
+      logo: logoFAA,
       start: '2023',
-      end: {
-        label: 'Present',
-        dateTime: new Date().getFullYear(),
-      },
+      end: '2024'
     },
     {
       company: 'Department of Homeland Security',
-      title: 'Senior Frontend Developer',
+      title: 'Senior Full-Stack Engineer',
       logo: logoDHS,
       start: '2023',
-      end: '2024',
-    },
-    {
-      company: 'Fillify.com',
-      title: 'Lead Application Engineer',
-      logo: logoFillify,
-      start: '2020',
-      end: '2022',
+      end: '2023',
     },
     {
       company: 'Simply Nutrition',
-      title: 'Co-founder & CTO',
+      title: 'Co-founder & Full-Stack Engineer',
       logo: logoSimplyNutrition,
-      start: '2016',
+      start: '2014',
       end: '2022',
     },
   ]
@@ -172,7 +162,7 @@ function Resume() {
         ))}
       </ol>
 
-      <Button href="/Senior_Application_Engineer_Resume.pdf" target="_blank" download="cv" variant="secondary" className="group mt-6 w-full">
+      <Button href="/Brandon_Owens_Resume.pdf" target="_blank" download="cv" variant="secondary" className="group mt-6 w-full">
         Download CV
         <ArrowDownIcon className="h-4 w-4 stroke-zinc-400 transition group-active:stroke-zinc-600 dark:group-hover:stroke-zinc-50 dark:group-active:stroke-zinc-50" />
       </Button>
@@ -217,14 +207,17 @@ export default async function Home() {
             Application engineer, entrepreneur, and amateur explorer.
           </h1>
           <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-            I`m Brandon, a full stack application engineer and entrepreneur based in Baltimore City, Maryland.
+            I'm Brandon, a decade-plus Senior Software Engineer and successful E-commerce Founder with a focus on delivering
+            scalable, profitable solutions. 
+            Proven architectural, full-stack, and business development expertise,
+            underpinned by strong foundational engineering discipline (NJATC 5-Year Master-Level Certificate).
+          </p>
+          <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
+            <strong>Currently focused on cloud-native application development and AI/ML integration, holding 10+ AWS
+            and AI/ML professional certifications/badges.</strong> I am always open to a challenging architectural or senior development
+            role where technical depth drives business value.
           </p>
           <div className="mt-6 flex gap-6">
-            <SocialLink
-              href="https://twitter.com/thebrandonowens"
-              aria-label="Follow me on Twitter"
-              icon={TwitterIcon}
-            />
             <SocialLink
               href="https://github.com/Bowens20832"
               aria-label="Follow me on GitHub"
