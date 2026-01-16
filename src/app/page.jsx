@@ -12,6 +12,7 @@ import logoFAA from '@/images/logos/faa.png'
 import logoDHS from '@/images/logos/dhs.svg'
 import logoFillify from '@/images/logos/fillify.png'
 import logoElegant from '@/images/logos/elegant.svg'
+import logoAmergis from '@/images/logos/amergis.png'
 import logoSimplyNutrition from '@/images/logos/simplynutrition.png'
 import image1 from '@/images/photos/image-1.png'
 import image2 from '@/images/photos/image-2.png'
@@ -89,9 +90,9 @@ function SocialLink({ icon: Icon, ...props }) {
 function Resume() {
   let resume = [
     {
-      company: 'Federal Aviation Administration',
-      title: 'Senior Full Stack Engineer',
-      logo: logoFAA,
+      company: 'Amergis',
+      title: 'Application Tech Lead',
+      logo: logoAmergis,
       start: '2024',
       end: {
         label: 'Present',
@@ -99,34 +100,24 @@ function Resume() {
       },
     },
     {
-      company: 'Elegant Framework',
-      title: 'Founder',
-      logo: logoElegant,
+      company: 'Federal Aviation Administration',
+      title: 'Senior Full-Stack Engineer',
+      logo: logoFAA,
       start: '2023',
-      end: {
-        label: 'Present',
-        dateTime: new Date().getFullYear(),
-      },
+      end: '2024'
     },
     {
       company: 'Department of Homeland Security',
-      title: 'Senior Frontend Developer',
+      title: 'Senior Full-Stack Engineer',
       logo: logoDHS,
       start: '2023',
-      end: '2024',
-    },
-    {
-      company: 'Fillify.com',
-      title: 'Lead Application Engineer',
-      logo: logoFillify,
-      start: '2020',
-      end: '2022',
+      end: '2023',
     },
     {
       company: 'Simply Nutrition',
-      title: 'Co-founder & CTO',
+      title: 'Co-founder & Full-Stack Engineer',
       logo: logoSimplyNutrition,
-      start: '2016',
+      start: '2014',
       end: '2022',
     },
   ]
@@ -172,9 +163,92 @@ function Resume() {
         ))}
       </ol>
 
-      <Button href="/Senior_Application_Engineer_Resume.pdf" target="_blank" download="cv" variant="secondary" className="group mt-6 w-full">
+      <Button href="/Brandon_Owens_Resume.pdf" target="_blank" download="cv" variant="secondary" className="group mt-6 w-full">
         Download CV
         <ArrowDownIcon className="h-4 w-4 stroke-zinc-400 transition group-active:stroke-zinc-600 dark:group-hover:stroke-zinc-50 dark:group-active:stroke-zinc-50" />
+      </Button>
+    </div>
+  )
+}
+
+function Certifications() {
+  let resume = [
+    {
+      company: 'Amergis',
+      title: 'Application Tech Lead',
+      logo: logoFAA,
+      start: '2024',
+      end: {
+        label: 'Present',
+        dateTime: new Date().getFullYear(),
+      },
+    },
+    {
+      company: 'Federal Aviation Administration',
+      title: 'Senior Full-Stack Engineer',
+      logo: logoFAA,
+      start: '2023',
+      end: '2024'
+    },
+    {
+      company: 'Department of Homeland Security',
+      title: 'Senior Full-Stack Engineer',
+      logo: logoDHS,
+      start: '2023',
+      end: '2023',
+    },
+    {
+      company: 'Simply Nutrition',
+      title: 'Co-founder & Full-Stack Engineer',
+      logo: logoSimplyNutrition,
+      start: '2014',
+      end: '2022',
+    },
+  ]
+
+  return (
+    <div className="rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40">
+      <h2 className="flex text-sm font-semibold text-zinc-900 dark:text-zinc-100">
+        <BriefcaseIcon className="h-6 w-6 flex-none" />
+        <span className="ml-3">Certifications & Badges</span>
+      </h2>
+      <ol className="mt-6 space-y-4">
+        {resume.map((role, roleIndex) => (
+          <li key={roleIndex} className="flex gap-4">
+            <div className="relative mt-1 flex h-10 w-10 flex-none items-center justify-center rounded-full shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
+              <Image src={role.logo} alt="" className="h-7 w-7 rounded-[20px]" unoptimized />
+            </div>
+            <dl className="flex flex-auto flex-wrap gap-x-2">
+              <dt className="sr-only">Company</dt>
+              <dd className="w-full flex-none text-sm font-medium text-zinc-900 dark:text-zinc-100">
+                {role.company}
+              </dd>
+              <dt className="sr-only">Role</dt>
+              <dd className="text-xs text-zinc-500 dark:text-zinc-400">
+                {role.title}
+              </dd>
+              <dt className="sr-only">Date</dt>
+              <dd
+                className="ml-auto text-xs text-zinc-400 dark:text-zinc-500"
+                aria-label={`${role.start.label ?? role.start} until ${
+                  role.end.label ?? role.end
+                }`}
+              >
+                <time dateTime={role.start.dateTime ?? role.start}>
+                  {role.start.label ?? role.start}
+                </time>{' '}
+                <span aria-hidden="true">—</span>{' '}
+                <time dateTime={role.end.dateTime ?? role.end}>
+                  {role.end.label ?? role.end}
+                </time>
+              </dd>
+            </dl>
+          </li>
+        ))}
+      </ol>
+
+      <Button href="/certifications"  variant="primary" className="group mt-6 w-full">
+        See All
       </Button>
     </div>
   )
@@ -217,14 +291,17 @@ export default async function Home() {
             Application engineer, entrepreneur, and amateur explorer.
           </h1>
           <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-            I`m Brandon, a full stack application engineer and entrepreneur based in Baltimore City, Maryland.
+            I'm Brandon, a decade-plus Senior Software Engineer and successful E-commerce Founder with a focus on delivering
+            scalable, profitable solutions. 
+            Proven architectural, full-stack, and business development expertise,
+            underpinned by strong foundational engineering discipline (NJATC 5-Year Master-Level Certificate).
+          </p>
+          <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
+            <strong>Currently focused on cloud-native application development and AI/ML integration, holding 10+ AWS
+            and AI/ML professional certifications/badges.</strong> I am always open to a challenging architectural or senior development
+            role where technical depth drives business value.
           </p>
           <div className="mt-6 flex gap-6">
-            <SocialLink
-              href="https://twitter.com/thebrandonowens"
-              aria-label="Follow me on Twitter"
-              icon={TwitterIcon}
-            />
             <SocialLink
               href="https://github.com/Bowens20832"
               aria-label="Follow me on GitHub"
@@ -241,9 +318,12 @@ export default async function Home() {
       <Photos />
       <Container className="mt-24 md:mt-28">
         <div className="mx-auto grid max-w-xl grid-cols-1 gap-y-20 lg:max-w-none lg:grid-cols-2">
+          <div className="flex flex-col gap-16">
+            <Resume />
+          </div>
           <div className="space-y-10 lg:pl-16 xl:pl-24">
             {/* <Newsletter /> */}
-            <Resume />
+            {/* <Certifications /> */}
           </div>
         </div>
       </Container>
