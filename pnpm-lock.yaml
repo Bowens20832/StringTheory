@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      '@brandonowens/elegant-ui':
+        specifier: ^0.1.19
+        version: 0.1.20(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
       '@headlessui/react':
         specifier: ^2.2.6
         version: 2.2.9(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
@@ -90,6 +93,12 @@ packages:
   '@alloc/quick-lru@5.2.0':
     resolution: {integrity: sha512-UrcABB+4bUrFABwbluTIBErXwvbsU/V7TZWfmbgJfbkwiBuziS9gxdODUyuiecfdGQ85jglMW6juS3+z5TsKLw==}
     engines: {node: '>=10'}
+
+  '@brandonowens/elegant-ui@0.1.20':
+    resolution: {integrity: sha512-JJWyUiDC/aKv8Ed4U4UmkCUNRV0oSvaoRYBQddK+myM62+pT8dwyHvIjWl8YSny+UEoZoyidPclDeb16cKf+EA==}
+    peerDependencies:
+      react: ^17.0.2 || ^18
+      react-dom: ^17.0.2 || ^18
 
   '@emnapi/core@1.8.1':
     resolution: {integrity: sha512-AvT9QFpxK0Zd8J0jopedNm+w/2fIzvtPKPjqyw9jwvBaReTTqPBk9Hixaz7KbjimP+QNz605/XnjFcDAL2pqBg==}
@@ -2877,6 +2886,11 @@ packages:
 snapshots:
 
   '@alloc/quick-lru@5.2.0': {}
+
+  '@brandonowens/elegant-ui@0.1.20(react-dom@19.2.3(react@19.2.3))(react@19.2.3)':
+    dependencies:
+      react: 19.2.3
+      react-dom: 19.2.3(react@19.2.3)
 
   '@emnapi/core@1.8.1':
     dependencies:
