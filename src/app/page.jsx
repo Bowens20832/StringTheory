@@ -291,7 +291,7 @@ export default async function Home() {
             Application engineer, entrepreneur, and amateur explorer.
           </h1>
           <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-            I'm Brandon, a decade-plus Senior Software Engineer and successful E-commerce Founder with a focus on delivering
+            I&apos;m Brandon, a decade-plus Senior Software Engineer and successful E-commerce Founder with a focus on delivering
             scalable, profitable solutions. 
             Proven architectural, full-stack, and business development expertise,
             underpinned by strong foundational engineering discipline (NJATC 5-Year Master-Level Certificate).
